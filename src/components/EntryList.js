@@ -19,9 +19,9 @@ export const EntryList = () => {
     setEntries(entries)
   }, [entries])
 
-  useEffect(() => {
-    searchEntries(searchedTerm)
-  }, [searchedTerm])
+  // useEffect(() => {
+  //   searchEntries(searchedTerm)
+  // }, [searchedTerm])
 
 
   const filterAllEntries = (event) => {
@@ -40,7 +40,7 @@ export const EntryList = () => {
           return <>
             <input type="radio" value={mood.id} name="moodId" checked={moodSelected === mood.id}
               onClick={filterAllEntries}
-            /> {mood.label}
+            /> {mood.mood}
           </>
         })
       }
